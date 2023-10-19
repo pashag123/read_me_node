@@ -25,7 +25,7 @@ const questions = [
         type: 'input',
         name: 'installation',
         message: 'what command would you like to run to install dependencies?',
-        default: 'npm 1'
+        default: 'npm i'
     },
     {
         type: 'input',
@@ -35,8 +35,9 @@ const questions = [
 
     },
     {
-
-        
+        type: 'input',
+        name: 'contributing',
+        message: 'please provide details to user about their contributions to the repo'
     },
     {
         type: 'input',
@@ -62,13 +63,15 @@ const questions = [
 
 
 const application = () => {
-    inquirer.createPromptModule(questions).then(answers => {
+    inquirer.prompt(questions).then(answers => {
         try {
             fs.writeFileSync('dist/README.md', generateMarkdown(answers))
-            console.log('congratulations your RADME.md file is now located in the dist folder, navigate there to view it')
+            console.log('congratulations your README.md file is now located in the dist folder, navigate there to view it')
         } catch (error) {
-            log(error.message)
+            console.log(error.message)
         }
     })
 
 };
+
+application();
