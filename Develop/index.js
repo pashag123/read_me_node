@@ -36,8 +36,18 @@ const questions = [
     },
     {
         type: 'input',
+        name: 'usage',
+        message: 'what details need to be provided to the user if they want to use the repo'
+    },
+    {
+        type: 'input',
         name: 'contributing',
         message: 'please provide details to user about their contributions to the repo'
+    },
+    {
+        type: 'input',
+        name: 'credits',
+        message: 'give credit to the developers that worked on the project'
     },
     {
         type: 'input',
