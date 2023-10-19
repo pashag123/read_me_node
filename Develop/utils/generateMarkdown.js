@@ -26,11 +26,21 @@ function generateMarkdown(data) {
  ${renderLicenseLink(data.license)} \n\n
  
  
- ## installation \n\n $
+ ## installation \n\n ${data.installation} \n\n
+
+ ## usage \n\n ${data.usage} \n\n
  
+ ## test \n\n ${data.test} \n\n
  
+ ## credits \n\n ${data.credit} \n\n
+
+ ## contribute \n\n ${data.contributing} \n\n
+
+ ${renderLicenseSection(data.license)} \n\n
  
- 
+ ## questions \n\n
+
+ if you have any questions see my email at ${data.email} and github at [https://github.com/pashag123](${data.github})
  `;
 }
 
