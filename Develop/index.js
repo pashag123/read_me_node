@@ -19,7 +19,7 @@ const questions = [
         type: 'list',
         name: 'license',
         message: 'what kind of license do you want to give your project?',
-        choices: ['MIT', 'APACHE 2.0', 'GPL 3.0', 'BSD 3', 'None']
+        choices: ['MIT', 'APACHE 2.0', 'GPL 3.0', 'BSD 3', 'none']
     },
     {
         type: 'input',
